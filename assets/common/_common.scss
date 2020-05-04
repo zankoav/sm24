@@ -1,0 +1,15 @@
+@import "fonts";
+@import "reset";
+@import "constants";
+/**
+ *  Add Swiper styles
+ *  @import "./../../node_modules/swiper/dist/css/swiper.min.css";
+ */
+// @import '~@fortawesome/fontawesome-free/css/all';
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@include container();

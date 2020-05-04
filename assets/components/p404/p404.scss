@@ -1,0 +1,38 @@
+@import "../../common/constants";
+
+.p404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 0;
+    background: url(./../../images/team.jpg) no-repeat;
+
+    &__title{
+        color: $BLACK;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 1.5;
+
+        @include sm{
+            font-size: 64px;
+        }
+
+        @include hd{
+            font-size: 72px;
+        }
+    }
+
+    &__subtitle{
+        color: $BLACK;
+        font-size: 20px;
+
+        @include sm{
+            font-size: 24px;
+        }
+
+        @include hd{
+            font-size: 32px;
+        }
+    }
+}
