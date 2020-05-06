@@ -1,0 +1,217 @@
+@import "./../../common/constants";
+
+.contacts {
+    position: relative;
+    z-index: 2;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include sm{
+        padding-top:1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include sm{
+            align-self: flex-start;
+        }
+
+        @include lg{
+            align-self: initial;
+        }
+    }
+
+    &__logo-image-wrapper{
+        background-color: $PRIMARY1;
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+        border-radius: 100%;
+
+        @include sm{
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+
+        @include lg{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__logo-name{
+        font-weight: 700;
+        color: $BLACK;
+        margin-left: 0.5rem;
+        font-size: 24px;
+
+        @include sm{
+            font-size: 28px;
+            margin-left: 0.75rem;
+        }
+    }
+
+    &__block{
+        margin-top: 1rem;
+
+        @include sm{
+            margin-top: .5rem;
+            display: flex;
+        }
+
+        @include lg{
+            margin-top: 0;
+        }
+    }
+
+    &__phones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include lg{
+            flex-direction: row;
+        }
+    }
+
+    &__phones-item{
+        padding-bottom: 1rem;
+        font-size: 14px;
+        color: rgba($BLACK,.75);
+        font-weight: 600;
+        letter-spacing: .05rem;
+
+        @include sm {
+            font-size: 16px;
+            padding-bottom: 1.25rem;
+        }
+
+        @include lg{
+            padding-bottom: 0;
+        }
+
+        &_life{
+            &:before{
+                content: ':)';
+                margin-right: 0.5rem;
+                display: inline-flex;
+                font-size: 16px;
+                justify-content: center;
+                align-items: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                background-color: $PRIMARY3;
+                color: $WHITE;
+
+                @include sm {
+                    margin-right: .75rem;
+                }
+            }
+        }
+
+        &_mts{
+            display: flex;
+            align-items: center;
+
+            @include lg {
+                margin-left: 2rem;
+            }
+
+            &:before{
+                content: '';
+                margin-right: 0.5rem;
+                display: inline-flex;
+                width: 1.25rem;
+                height: 1.25rem;
+                background: url(./../../images/mts.jpg) no-repeat;
+                background-size: cover;
+
+                @include sm {
+                    margin-right: .75rem;
+                }
+            }
+        }
+    }
+
+    &__phones-order-call{
+        color: $PRIMARY2;
+        padding-bottom: 1rem;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        letter-spacing: .05rem;
+
+        @include sm {
+            font-size: 13px;
+        }
+
+        @include lg{
+            padding-bottom: 0;
+            font-size: 14px;
+            margin-left: 2rem;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        justify-content: center;
+
+        @include sm {
+            order: -1;
+            margin-right: 3rem;
+        }
+
+        @include lg {
+            margin-right: 4rem;
+        }
+    }
+
+    &__socials-item{
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+
+        &_telegram {
+            background: url(./../../images/telegram.svg) no-repeat;
+            background-size: 75%;
+            background-position: center;
+            margin-right: 1rem;
+            
+            @include sm {
+                background-size: cover;
+                margin-right: 2rem;
+            }
+        }
+
+        &_vk {
+            background: url(./../../images/vk.svg) no-repeat;
+            background-size: 75%;
+            background-position: center;
+
+            @include sm {
+                background-size: cover;
+            }
+        }
+
+        @include sm {
+            width: 2rem;
+            height: 2rem;
+            padding:0;
+        }
+
+        @include sm {
+            width: 2rem;
+            height: 2rem;
+            padding:0;
+        }
+    }
+}

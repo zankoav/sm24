@@ -1,5 +1,9 @@
 @import "./../../common/constants";
 
 .header {
-
+    position: relative;
+    background-color: $GRAY1;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
 }

@@ -1,0 +1,41 @@
+mixin main-slider()
+    - var slide_1 = require("./../images/slide_1.png").default;
+    - var slide_2 = require("./../images/slide_2.png").default;
+    - var slide_3 = require("./../images/slide_3.png").default;
+    .main-slider
+        .swiper-container.main-slider__swiper
+            .swiper-wrapper
+                .swiper-slide.main-slider__slide
+                    .container.main-slider__slide-container
+                        .main-slider__slide-wrapper
+                            .main-slider__content-item(data-swiper-parallax-y="-100", data-swiper-parallax-opacity="0") 
+                                h2.main-slider__content-item-title 
+                                    | Срочный ремонт стиральных машин на дому
+                                p.main-slider__content-item-description 
+                                    | Мы предлагаем срочный и недорогой ремонт стиральных машин в Минске
+                                    | и Минском районе не выходя из дома! 
+                                    | Работаем со всеми известными марками и моделями машин.
+                                +free-consultation()
+                            img.swiper-lazy.main-slider__img(data-src=slide_1)
+                .swiper-slide.main-slider__slide
+                    .container.main-slider__slide-container
+                        .main-slider__slide-wrapper
+                            .main-slider__content-item(data-swiper-parallax-y="-100", data-swiper-parallax-opacity="0")  
+                                h2.main-slider__content-item-title 
+                                    | РЕМОНТ МИКРОВОЛНОВЫХ ПЕЧЕЙ НА ДОМУ!
+                                p.main-slider__content-item-description 
+                                    | Срочный выезд. Гарантия до 12 мес. Оригинальные запчасти.
+                                    | Устраняем различные поломки по доступной цене и с гарантией.
+                                +free-consultation()
+                            img.swiper-lazy.main-slider__img(data-src=slide_2)
+                .swiper-slide.main-slider__slide
+                    .container.main-slider__slide-container
+                        .main-slider__slide-wrapper
+                            .main-slider__content-item(data-swiper-parallax-y="-100", data-swiper-parallax-opacity="0")  
+                                h2.main-slider__content-item-title 
+                                    | РЕМОНТ ПЫЛЕСОСОВ НА ДОМУ НЕДОРОГО!
+                                p.main-slider__content-item-description 
+                                    | Мы осуществляют квалифицированный ремонт пылесосов на основе технически-грамотного подхода с использованием лицензионных запасных частей.
+                                +free-consultation()
+                            img.swiper-lazy.main-slider__img(data-src=slide_3)
+            .swiper-pagination.main-slider__pagination
