@@ -1,15 +1,16 @@
 mixin contacts()
     - var logoIcon = require("./../images/edited.svg").default;
     .contacts
-        a.contacts__logo(href="/")
-            .contacts__logo-image-wrapper
-                img.contacts__logo-image(src=logoIcon, alt="sm24.by")
-            .contacts__logo-name SM24.BY 
-        .contacts__block 
-            .contacts__phones
-                a(href="tel:+375 (25) 550-57-69").contacts__phones-item.contacts__phones-item_life +375 (25) 550-57-69
-                a(href="tel:+375 (29) 864-77-49").contacts__phones-item.contacts__phones-item_mts +375 (29) 864-77-49
-                a(href="javascript:void(0)").contacts__phones-order-call заказать звонок
-            .contacts__socials
-                a(href="telegram.me/@zankoav").contacts__socials-item.contacts__socials-item_telegram        
-                a(href="https://vk.com").contacts__socials-item.contacts__socials-item_vk        
+        .container.contacts__container
+            a.contacts__logo(href="/")
+                .contacts__logo-image-wrapper
+                    img.contacts__logo-image(src=logoIcon, alt="sm24.by")
+                .contacts__logo-name SM24.BY 
+            .contacts__block 
+                .contacts__phones
+                    a(href="tel:+375 (25) 550-57-69").contacts__phones-item.contacts__phones-item_life +375 (25) 550-57-69
+                    a(href="tel:+375 (29) 864-77-49").contacts__phones-item.contacts__phones-item_mts +375 (29) 864-77-49
+                    a(href="javascript:void(0)").contacts__phones-order-call заказать звонок
+                .contacts__socials
+                    a(href="telegram.me/@zankoav").contacts__socials-item.contacts__socials-item_telegram        
+                    a(href="https://vk.com").contacts__socials-item.contacts__socials-item_vk        

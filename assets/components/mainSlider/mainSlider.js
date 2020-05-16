@@ -1,10 +1,11 @@
 import './mainSlider.scss';
 import $ from 'jquery';
 import Swiper from 'swiper';
+import { showModal } from './../modal/modal';
 
-var mySwiper = new Swiper('.main-slider__swiper', {
+new Swiper('.main-slider__swiper', {
     autoplay: {
-        delay: 5000,
+        delay: 3000,
     },
     loop: true,
     lazy: {
@@ -22,6 +23,8 @@ var mySwiper = new Swiper('.main-slider__swiper', {
         crossFade: true
     },
     disableOnInteraction: false,
-    allowTouchMove: false,
+    allowTouchMove: true,
     speed: 800
 });
+
+$('.main-slider__content-item .free-consultation').on('click', showModal);

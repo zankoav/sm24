@@ -41,7 +41,7 @@ let entries = {
 
 module.exports = env => {
     const IS_DEV = env.mode === 'development';
-    const PUBLIC_PATH = IS_DEV ? '/' : `/wp-content/themes/${THEME_NAME}/`;
+    const PUBLIC_PATH = IS_DEV ? '/' : `/wp-content/themes/${THEME_NAME}/src/`;
 
     const plugins = [
         new CleanWebpackPlugin(),

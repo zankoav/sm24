@@ -13,7 +13,7 @@
 
 			$assets = self::getData( $key );
 			if ( isset( $assets ) and isset( $assets["js"] ) ) {
-				return BASE_URL . $assets["js"];
+				return  $assets["js"];
 			}
 
 			return null;
@@ -22,7 +22,7 @@
 		public static function getCss( $key ) {
 			$assets = self::getData( $key );
 			if ( isset( $assets ) and isset( $assets["css"] ) ) {
-				return BASE_URL . $assets["css"];
+				return  $assets["css"];
 			}
 
 			return null;

@@ -3,7 +3,11 @@ doctype html
 html
     +head()
     body(class="body_overflow_hidden")
+        script
+            include ./../utils/_landing_ajax.js
         +header()
-        main.home Main
+        main.home
+            +repair()
         +footer()
+        +modal()
             

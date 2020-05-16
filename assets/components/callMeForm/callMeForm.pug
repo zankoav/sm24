@@ -1,0 +1,29 @@
+mixin callMeForm()
+    - var imgHref = require("./../images/modalImage.jpg").default;
+    - var flag = require("./../images/flag.png").default;
+    - var close = require("./../images/cross.svg").default;
+    - var spinner = require("./../images/spinner.svg").default;
+    .call-me-form
+        a.call-me-form__close(href="javascript:void(0)")
+            img.call-me-form__close-img(src=close)
+        img.call-me-form__img(src=imgHref)
+        .call-me-form__card.call-me-form__card_form
+            h3.call-me-form__title Оставьте свой номер и Мастер перезвонит Вам!
+            p.call-me-form__description Антон бесплатно проконсультирует Вас!
+            .call-me-form__input-group
+                img.call-me-form__input-img(src=flag)
+                input.call-me-form__input(type=text name="phone")
+            .call-me-form__error-message Введите номер корректно
+            .call-me-form__button-wrapper
+                +free-consultation("Бесплатная консультация", 'call-me-form__card-send-phone')
+        .call-me-form__card.call-me-form__card_loading.call-me-form__card_hidden
+            img.call-me-form__card-spinner(src=spinner)
+            span.call-me-form__card-spinner-message Отправка...
+        .call-me-form__card.call-me-form__card_result.call-me-form__card_hidden
+            h4.call-me-form__card-result-title Вызов принят!
+            p.call-me-form__card-result-description Я скоро перезвоню
+            .call-me-form__button-wrapper
+                +free-consultation("Отправить еще заявку", 'call-me-form__card-result-again')
+
+
+

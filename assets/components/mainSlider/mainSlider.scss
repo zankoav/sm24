@@ -53,20 +53,23 @@
     &__img{
         object-fit: cover;
         display: inline-block;
-        opacity: .15;
+        opacity: .2;
+        width: 100%;
+        height: auto;
 
         @include sm {
             max-width: 75%;
         }
 
-        @include lg{
-            height: 600px;
-            object-fit: contain;
-            opacity: 1;
+        @include md {
+            max-width: 60%;
         }
 
-        @include hd{
+        @include lg{
+            max-width: initial;
+            height: 600px;
             width: 800px;
+            object-fit: contain;
             opacity: 1;
         }
     }
@@ -102,10 +105,10 @@
         text-transform: uppercase;
         font-size: 22px;
         line-height: 28px;
-        font-weight: 600;
-        letter-spacing: .02rem;
+        font-weight: 300;
+        letter-spacing: 2px;
         margin: auto;
-        color: $GRAY2;
+        color: $BLACK;
 
         @include sm {
             font-size: 32px;
@@ -116,6 +119,7 @@
             margin: 0;
             font-size: 34px;
             line-height: 44px;
+            max-width: 300px;
         }
 
         &:after {
@@ -132,12 +136,13 @@
 
     &__content-item-description {
         font-size: 14px;
-        line-height: 1.5;
+        line-height: 1.7;
+        font-weight: 300;
         margin: auto;
         color: $GRAY2;
 
         @include sm {
-            font-size: 20px;
+            font-size: 16px;
         }
 
         @include lg {

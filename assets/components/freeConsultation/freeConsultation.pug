@@ -1,2 +1,3 @@
-mixin free-consultation()
-    a.free-consultation(href="javascript:void(0)") Бесплатная Консультация
+mixin free-consultation(value, addedClass)
+    - var classElement = addedClass ? `free-consultation ${addedClass}` : 'free-consultation';
+    a(class=classElement href="javascript:void(0)")=value

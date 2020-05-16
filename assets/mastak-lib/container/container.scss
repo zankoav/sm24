@@ -19,10 +19,6 @@ $MAX-WIDTH_SMALL: 900px;
             margin-right: auto;
         }
 
-        @include hd {
-            max-width: $MAX-WIDTH_HD;
-        }
-
         &_small {
             @include lg {
                 max-width: $MAX-WIDTH_SMALL;

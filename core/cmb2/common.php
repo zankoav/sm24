@@ -20,34 +20,111 @@ function common_metabox()
      * Registers options page menu item and form.
      */
     $cmb_options = new_cmb2_box(array(
-        'id' => THEME_NAME . '_theme_options_page',
-        'title' => __('Theme Settings', THEME_NAME),
-        'object_types' => array('options-page'),
-        'option_key' => THEME_NAME . '_theme_options',
-        'icon_url' => 'dashicons-palmtree',
+        'id' => THEME_NAME . '_home_page',
+        'title' => 'Настройки страницы',
+        'object_types' => array('page'),
+        'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
+        'context'      => 'normal', //  'normal', 'advanced', or 'side'
+        'priority'     => 'high',  //  'high', 'core', 'default' or 'low'
+        'show_names'   => true, // Show field names on the left
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('Slogan', THEME_NAME),
-        'id' => 'slogan_title',
-        'type' => 'title'
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => __('Slogan', THEME_NAME),
-        'id' => 'slogan',
-        'type' => 'textarea_small'
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => __('Contacts', THEME_NAME),
+        'name' => 'Контакты',
         'id' => 'contacts_title',
         'type' => 'title'
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('Phone', THEME_NAME),
-        'id' => 'phone',
+        'name' => 'Life',
+        'id' => 'life',
+        'type' => 'text_medium'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'MTC',
+        'id' => 'mtc',
+        'type' => 'text_medium'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => esc_html__('Telegram', THEME_NAME),
+        'id' => 'telegram',
+        'type' => 'text_medium',
+        'description' => 'Пример: @zankoav'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => esc_html__('VK', THEME_NAME),
+        'id' => 'vk',
+        'type' => 'text_medium',
+        'description' => 'Пример: https://vk.com/zankoav'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Главный слайдер',
+        'id' => 'main_slider_title',
+        'type' => 'title'
+    ));
+
+    $group_field_id = $cmb_options->add_field(array(
+        'id' => 'slider_item',
+        'type' => 'group',
+        'options' => array(
+            'group_title' => 'Слайд {#}',
+            'add_button' => 'Добавить слайд',
+            'remove_button' => 'Удалить слайд',
+            'closed' => true,
+        ),
+    ));
+
+
+    $cmb_options->add_group_field($group_field_id, array(
+        'name' => 'Заголовок',
+        'id' => 'title',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_group_field($group_field_id, array(
+        'name' => 'Описание',
+        'id' => 'description',
+        'type' => 'textarea_small',
+    ));
+
+    $cmb_options->add_group_field($group_field_id, array(
+        'name' => 'Название кнопки',
+        'id' => 'button_title',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_group_field($group_field_id, array(
+        'name' => 'Картинка',
+        'desc' => 'Рекомендуемый размер (800x600)',
+        'id' => 'image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Модальное окно',
+        'id' => 'modal_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка',
+        'id' => 'modal_image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'modal_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Подзаголовок',
+        'id' => 'modal_description',
         'type' => 'text'
     ));
 
@@ -58,157 +135,120 @@ function common_metabox()
     ));
 
     $cmb_options->add_field(array(
-        'name' => esc_html__('Telegram', THEME_NAME),
-        'id' => 'telegram',
-        'type' => 'text',
-        'before' => '@'
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => esc_html__('Skype', THEME_NAME),
-        'id' => 'skype',
+        'name' => 'Ошибка ввода номера',
+        'id' => 'modal_input_error',
         'type' => 'text'
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('Location', THEME_NAME),
-        'id' => 'location',
-        'type' => 'textarea_small'
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => __('Main Slider', THEME_NAME),
-        'id' => 'main_slider_title',
-        'type' => 'title'
-    ));
-
-    $group_field_id = $cmb_options->add_field(array(
-        'id' => 'slider_item',
-        'type' => 'group',
-        'options' => array(
-            'group_title' => __('Slide {#}', THEME_NAME),
-            'add_button' => __('Add Slide', THEME_NAME),
-            'remove_button' => __('Remove Slide', THEME_NAME),
-            'closed' => true,
-        ),
-    ));
-
-    $cmb_options->add_group_field($group_field_id, array(
-        'name' => __('Image', THEME_NAME),
-        'desc' => __('Recommended size (1200x600)', THEME_NAME),
-        'id' => 'image',
-        'type' => 'file'
-    ));
-
-    $cmb_options->add_group_field($group_field_id, array(
-        'name' => __('Title', THEME_NAME),
-        'id' => 'title',
-        'type' => 'text',
-    ));
-
-    $cmb_options->add_group_field($group_field_id, array(
-        'name' => __('Description', THEME_NAME),
-        'id' => 'description',
-        'type' => 'textarea_small',
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => __('Contact Form', THEME_NAME),
-        'id' => 'contact_form_title',
-        'type' => 'title'
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => __('Paragraphs', THEME_NAME),
-        'id' => 'paragraphs',
-        'type' => 'textarea_small',
-        'repeatable' => true,
-        'text' => array(
-            'add_row_text' => __('Add Another Paragraphs', THEME_NAME)
-        )
-    ));
-
-    $cmb_options->add_field(array(
-        'name' => __('Partners', THEME_NAME),
-        'id' => 'partners_title',
-        'type' => 'title'
-    ));
-
-    $group_field_id = $cmb_options->add_field(array(
-        'id' => 'partners_group',
-        'type' => 'group',
-        'options' => array(
-            'group_title' => __('Partner {#}', THEME_NAME),
-            'add_button' => __('Add Partner', THEME_NAME),
-            'remove_button' => __('Remove Partner', THEME_NAME),
-            'sortable' => true,
-            'closed' => true,
-        ),
-    ));
-
-    $cmb_options->add_group_field($group_field_id, array(
-        'name' => __('Name', THEME_NAME),
-        'id' => 'name',
+        'name' => 'Заголовок успешной отправке',
+        'id' => 'modal_success_title',
         'type' => 'text'
     ));
 
-    $cmb_options->add_group_field($group_field_id, array(
-        'name' => __('Image', THEME_NAME),
-        'desc' => __('Recommended size (280x140)', THEME_NAME),
-        'id' => 'image',
-        'type' => 'file'
+    $cmb_options->add_field(array(
+        'name' => 'Подзаголовок успешной отправке',
+        'id' => 'modal_success_description',
+        'type' => 'text'
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('Resent Projects Section', THEME_NAME),
-        'id' => 'recent_title',
-        'type' => 'title'
+        'name' => 'Заголовок при ошибке',
+        'id' => 'modal_error_title',
+        'type' => 'text'
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('All Products URL', THEME_NAME),
-        'id' => 'all_products_url',
-        'type' => 'text_url'
+        'name' => 'Подзаголовок при ошибке',
+        'id' => 'modal_error_description',
+        'type' => 'text'
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('Privacy Policy & Cookies', THEME_NAME),
-        'id' => 'privacy_title',
-        'type' => 'title'
+        'name' => 'Кнопка "Отправить"',
+        'id' => 'modal_button_title',
+        'type' => 'text'
     ));
 
     $cmb_options->add_field(array(
-        'name' => __('Privacy Policy Page', THEME_NAME),
-        'id' => 'privacy_policy',
-        'type' => 'select',
-        'show_option_none' => true,
-        'options_cb' => 'pages_list',
+        'name' => 'Кнопка "Отпраить еще раз"',
+        'id' => 'modal_button_again_title',
+        'type' => 'text'
     ));
 
-    $cmb_options->add_field(array(
-        'name' => __('Cookies Page', THEME_NAME),
-        'id' => 'cookies',
-        'type' => 'select',
-        'show_option_none' => true,
-        'options_cb' => 'pages_list',
-    ));
+    // $cmb_options->add_field(array(
+    //     'name' => __('Paragraphs', THEME_NAME),
+    //     'id' => 'paragraphs',
+    //     'type' => 'textarea_small',
+    //     'repeatable' => true,
+    //     'text' => array(
+    //         'add_row_text' => __('Add Another Paragraphs', THEME_NAME)
+    //     )
+    // ));
 
-}
+    // $cmb_options->add_field(array(
+    //     'name' => __('Partners', THEME_NAME),
+    //     'id' => 'partners_title',
+    //     'type' => 'title'
+    // ));
 
-function pages_list($field)
-{
+    // $group_field_id = $cmb_options->add_field(array(
+    //     'id' => 'partners_group',
+    //     'type' => 'group',
+    //     'options' => array(
+    //         'group_title' => __('Partner {#}', THEME_NAME),
+    //         'add_button' => __('Add Partner', THEME_NAME),
+    //         'remove_button' => __('Remove Partner', THEME_NAME),
+    //         'sortable' => true,
+    //         'closed' => true,
+    //     ),
+    // ));
 
-    $posts = get_posts([
-        'post_type' => 'page',
-        'numberposts' => -1
-    ]);
+    // $cmb_options->add_group_field($group_field_id, array(
+    //     'name' => __('Name', THEME_NAME),
+    //     'id' => 'name',
+    //     'type' => 'text'
+    // ));
 
-    $result = [];
+    // $cmb_options->add_group_field($group_field_id, array(
+    //     'name' => __('Image', THEME_NAME),
+    //     'desc' => __('Recommended size (280x140)', THEME_NAME),
+    //     'id' => 'image',
+    //     'type' => 'file'
+    // ));
 
-    foreach ($posts as $post) {
+    // $cmb_options->add_field(array(
+    //     'name' => __('Resent Projects Section', THEME_NAME),
+    //     'id' => 'recent_title',
+    //     'type' => 'title'
+    // ));
 
-        $result[$post->ID] = $post->post_title;
-    }
+    // $cmb_options->add_field(array(
+    //     'name' => __('All Products URL', THEME_NAME),
+    //     'id' => 'all_products_url',
+    //     'type' => 'text_url'
+    // ));
 
-    return $result;
+    // $cmb_options->add_field(array(
+    //     'name' => __('Privacy Policy & Cookies', THEME_NAME),
+    //     'id' => 'privacy_title',
+    //     'type' => 'title'
+    // ));
+
+    // $cmb_options->add_field(array(
+    //     'name' => __('Privacy Policy Page', THEME_NAME),
+    //     'id' => 'privacy_policy',
+    //     'type' => 'select',
+    //     'show_option_none' => true,
+    //     'options_cb' => 'pages_list',
+    // ));
+
+    // $cmb_options->add_field(array(
+    //     'name' => __('Cookies Page', THEME_NAME),
+    //     'id' => 'cookies',
+    //     'type' => 'select',
+    //     'show_option_none' => true,
+    //     'options_cb' => 'pages_list',
+    // ));
+
 }

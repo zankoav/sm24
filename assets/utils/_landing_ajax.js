@@ -1,0 +1,1 @@
+var landing_ajax = { "url": "http:\/\/sm24.loc\/wp-admin\/admin-ajax.php" };

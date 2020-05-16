@@ -1,0 +1,113 @@
+@import "./../../common/constants";
+
+.repair {
+
+    padding: 2rem 0;
+
+    @include sm{
+        padding: 3rem 0;
+    }
+
+    @include lg{
+        padding: 4rem 0;
+    }
+    
+    &__wrapper{
+
+        @include sm {
+            display: flex;
+            max-width: initial;
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+    }
+
+    &__text{
+        @include sm {
+            flex-grow: 1;
+            padding: 0 1rem;
+        }
+    }
+
+    &__image-wrapper{
+        @include sm {
+            flex-shrink: 0;
+            width: 332px;
+            padding: 0 1rem;
+        }
+
+        @include lg{
+            width: 460px;
+        }
+    }
+
+    &__image{
+        border: 6px solid $PRIMARY1;
+        width: 100%;
+        height: auto;   
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        @include sm {
+            font-size: 22px;
+            margin-bottom: 1.5rem;
+        }
+
+        @include lg {
+            max-width: 540px;
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 300;
+        color: $GRAY2;
+        margin-bottom: 1rem;
+
+        @include sm {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        @include lg{
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__list{
+        margin-bottom: 1.5rem;
+    }
+    
+    &__item{
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 300;
+        color: $GRAY2;
+        display: flex;
+
+        @include sm {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 0.25rem;
+        }
+
+        &:before{
+            content: '';
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+            margin-top: 0.25rem;
+            display: inline-block;
+            width: 1rem;
+            background: url(./../../images/like.svg) no-repeat;
+        }
+
+    }
+}

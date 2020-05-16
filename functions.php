@@ -14,14 +14,11 @@
 
 	require_once __DIR__ . '/utils/Assets.php';
 	require_once __DIR__ . '/utils/SingletonOptions.php';
-	// require_once __DIR__ . '/core/init_theme.php';
-	// require_once __DIR__ . '/core/custom-types/worker.php';
-	// require_once __DIR__ . '/core/custom-types/project.php';
+	require_once __DIR__ . '/core/init_theme.php';
 	// require_once __DIR__ . '/core/menu.php';
-	// require_once __DIR__ . '/core/styles.php';
-	// require_once __DIR__ . '/core/scripts.php';
-	// require_once __DIR__ . '/core/hooks.php';
-	// require_once __DIR__ . '/core/cmb2/common.php';
+	require_once __DIR__ . '/core/styles.php';
+	require_once __DIR__ . '/core/scripts.php';
+	require_once __DIR__ . '/core/cmb2/common.php';
 	// require_once __DIR__ . '/core/cmb2/worker.php';
 	// require_once __DIR__ . '/core/cmb2/project.php';
-	// require_once __DIR__ . '/core/ajax.php';
+	require_once __DIR__ . '/core/ajax.php';
