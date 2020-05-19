@@ -1,0 +1,95 @@
+@import "./../../common/constants";
+
+.text-content {
+    padding-top: 2.5rem;
+
+    @include sm{
+        padding-top: 4rem;
+    }
+
+    @include lg{
+        padding-top: 6rem;
+    }
+
+    &:last-child{
+        padding-bottom: 2.5rem;
+
+        @include sm{
+            padding-bottom: 4rem;
+        }
+    
+        @include lg{
+            padding-bottom: 6rem;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        @include sm {
+            font-size: 22px;
+        }
+
+        @include lg {
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 300;
+        color: $GRAY2;
+        margin-bottom: 2rem;
+
+        @include sm {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+
+    &__image{
+        border: 6px solid $PRIMARY1;
+        width: 100%;
+        height: auto;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include sm{
+            display: block;
+        }
+
+        
+    }
+
+    &__image-wrapper{
+        @include sm{
+            float: right;
+            max-width: 300px;
+            margin: 0 0 2rem 1rem;
+        }
+
+        @include lg{
+            max-width: 360px;
+            margin: 0 0 2rem 2rem;
+        }
+
+        &_left{
+            @include sm{
+                float: left;
+                margin: 0 2rem 1rem 0;
+            }
+
+            @include lg{
+                margin: 0 2rem 2rem 0;
+            }
+        }
+    }
+}

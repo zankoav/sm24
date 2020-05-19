@@ -1,5 +1,345 @@
 @import "./../../common/constants";
 
 .footer {
+    background-color: $GRAY1;
+    padding: 2.5rem 0;
+
+    @include sm{
+        padding: 4rem 0 2rem;
+    }
+
+    @include lg{
+        padding: 6rem 0 3rem;
+    }
+
+    &__top{
+        display: flex;
+        max-width: initial;
+        margin: 0 -1rem;
+        flex-wrap: wrap;
+
+        @include sm{
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__top-left{
+        order: 1;
+        padding: 0 1rem;
+        max-width: 100%;
+        flex: 1 0 100%;
+
+
+        @include sm{
+            order: initial;
+            flex: 1;
+        }
+    }
+
+    &__top-right{
+        padding: 0 1rem;
+        max-width: 100%;
+        flex: 1 0 100%;
+
+        @include sm{
+            flex: initial;
+            flex-shrink: 0;
+            max-width: 300px;
+        }
+
+        @include md {
+            max-width: 400px;
+        }
+
+        @include lg {
+            max-width: 460px;
+        }
+    }
+
+
     
+
+    &__top-title{
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+
+    &__top-description {
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 300;
+        color: $GRAY2;
+        margin-bottom: 1.5rem;
+
+        @include sm {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        @include lg{
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__top-list{
+        margin-bottom: 2rem;
+    }
+    
+    &__top-item{
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 300;
+        color: $GRAY2;
+        display: flex;
+        margin-bottom: 0.5rem;
+
+        @include sm {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 0.25rem;
+        }
+
+        &:before{
+            content: '';
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+            margin-top: 0.25rem;
+            display: inline-block;
+            width: 1rem;
+            background: url(./../../images/like.svg) no-repeat;
+        }
+    }
+
+
+    &__top-logo-wrapper{
+        background-color: $PRIMARY1;
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+        border-radius: 100%;
+
+        @include sm{
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+
+        @include lg{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__top-home-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        @include sm{
+            justify-content: left;
+            display: inline-flex;
+        }
+    }
+
+    &__top-name{
+        font-weight: 700;
+        color: $BLACK;
+        margin-left: 0.5rem;
+        font-size: 24px;
+
+        @include sm{
+            font-size: 28px;
+            margin-left: 0.75rem;
+        }
+    }
+
+    &__bottom-button-wrapper{
+        margin-top: 1rem;
+
+        @include lg{
+            margin-top: 0;
+        }
+    }
+
+    &__bottom{
+        text-align: center;
+
+        @include lg{
+            text-align: left;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__bottom-block{
+        @include lg{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+    }
+
+    &__bottom-socials{
+
+        @include sm{
+            margin: 1rem 0 1.5rem;
+        }
+
+        @include lg{
+            margin:0 4rem 0 0;
+        }
+    }
+
+    &__bottom-phones{
+
+        @include sm{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+    }
+
+    &__socials-item{
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+
+        &_telegram {
+            background: url(./../../images/telegram.svg) no-repeat;
+            background-size: 75%;
+            background-position: center;
+            margin-right: 1rem;
+            
+            @include sm {
+                background-size: cover;
+                margin-right: 2rem;
+            }
+        }
+
+        &_vk {
+            background: url(./../../images/vk.svg) no-repeat;
+            background-size: 75%;
+            background-position: center;
+
+            @include sm {
+                background-size: cover;
+            }
+        }
+
+        @include sm {
+            width: 2rem;
+            height: 2rem;
+            padding:0;
+        }
+
+        @include sm {
+            width: 2rem;
+            height: 2rem;
+            padding:0;
+        }
+    }
+
+    &__phones-item{
+        padding-bottom: 1rem;
+        font-size: 14px;
+        color: $BLACK;
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+
+        @include sm {
+            font-size: 16px;
+            padding-bottom: 1.25rem;
+        }
+
+        @include lg{
+            padding-bottom: 0;
+        }
+
+        &_life{
+            &:before{
+                content: ':)';
+                margin-right: 0.5rem;
+                display: inline-flex;
+                font-size: 16px;
+                justify-content: center;
+                align-items: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                background-color: $PRIMARY3;
+                color: $WHITE;
+
+                @include sm {
+                    margin-right: .75rem;
+                }
+            }
+        }
+
+        &_mts{
+        
+            @include lg {
+                margin-left: 2rem;
+            }
+
+            &:before{
+                content: '';
+                margin-right: 0.5rem;
+                display: inline-flex;
+                width: 1.25rem;
+                height: 1.25rem;
+                background: url(./../../images/mts.jpg) no-repeat;
+                background-size: cover;
+
+                @include sm {
+                    margin-right: .75rem;
+                }
+            }
+        }
+    }
+
+    &__phones-order-call{
+        color: $PRIMARY2;
+        display: inline-block;
+        padding-bottom: 1rem;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        letter-spacing: .05rem;
+
+        @include sm {
+            font-size: 13px;
+            padding-bottom: 1.25rem;
+        }
+
+        @include lg{
+            padding-bottom: 0;
+            font-size: 14px;
+            margin-left: 2rem;
+        }
+    }
+
+    &__copy{
+        font-size: 14px;
+        color: $GRAY3;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include sm{
+            margin-top: 3rem;
+        }
+    }
+
+    &__copy-developer{
+        color: $GRAY3;
+        text-decoration: underline;
+        margin-left: .25rem;
+    }
 }

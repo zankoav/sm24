@@ -8,6 +8,15 @@ html
         +header()
         main.home
             +repair()
+            +advantages()
+            +whatWeDo()
+            +workOrder()
+            +destruction()
+            +marks()
+            - var img_1 = require("./../images/item_3.png").default;
+            - var img_2 = require("./../images/item_4.png").default;
+            +textContent("Можно ли отремонтировать машинку в Минске по приемлемым ценам?", img_1)
+            +textContent("95% ремонтов стиральных машин производится на дому", img_2, true)
         +footer()
         +modal()
             

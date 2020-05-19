@@ -176,6 +176,163 @@ function common_metabox()
         'type' => 'text'
     ));
 
+    $cmb_options->add_field(array(
+        'name' => 'Недорогой и качественный ремонт',
+        'id' => 'repair_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'repair_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание',
+        'id' => 'repair_description',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка',
+        'id' => 'repair_image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Список',
+        'id' => 'repair_list',
+        'type' => 'text',
+        'repeatable' => true
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Приемущества',
+        'id' => 'advantages_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 1',
+        'id' => 'advantages_title_1',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 1',
+        'id' => 'advantages_description_1',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 2',
+        'id' => 'advantages_title_2',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 2',
+        'id' => 'advantages_description_2',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 3',
+        'id' => 'advantages_title_3',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 3',
+        'id' => 'advantages_description_3',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Что мы делаем',
+        'id' => 'we_do_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок секции',
+        'id' => 'we_do_main_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 1',
+        'id' => 'we_do_title_1',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 1',
+        'id' => 'we_do_description_1',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка 1',
+        'id' => 'we_do_image_1',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 2',
+        'id' => 'we_do_title_2',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 2',
+        'id' => 'we_do_description_2',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка 2',
+        'id' => 'we_do_image_2',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 3',
+        'id' => 'we_do_title_3',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 3',
+        'id' => 'we_do_description_3',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка 3',
+        'id' => 'we_do_image_3',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 4',
+        'id' => 'we_do_title_4',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание 4',
+        'id' => 'we_do_description_4',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка 4',
+        'id' => 'we_do_image_4',
+        'type' => 'file'
+    ));
+
     // $cmb_options->add_field(array(
     //     'name' => __('Paragraphs', THEME_NAME),
     //     'id' => 'paragraphs',

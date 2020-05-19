@@ -1,0 +1,18 @@
+mixin advantages()
+    .advantages
+        .container
+            .advantages__wrapper
+                .advantages__col
+                    +advantage('01','Бесплатная диагностика', 'Предлагаем бесплатную диагностику в случае ремонта')
+                .advantages__col
+                    +advantage('02','Низкая стоимость', 'Мы чиним вашу бытовую  технику по самым низким ценам в минске')
+                .advantages__col
+                    +advantage('03','Качество сервиса', 'Мы используем только оригинальные комплектующие и предоставляем гарантию на работу')
+
+
+mixin advantage(number, title, description)
+    .advantage
+        .advantage__number=number
+        .advantage__text
+            h5.advantage__title=title
+            p.advantage__description=description

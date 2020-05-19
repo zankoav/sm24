@@ -1,0 +1,19 @@
+mixin workOrder()
+    .work-order
+        .container
+            .work-order__title Порядок работы
+            .work-order__wrapper
+                .work-order__col
+                    +orderItem('01', 'Вызов мастера')
+                .work-order__col
+                    +orderItem('02', 'диагностика')
+                .work-order__col 
+                    +orderItem('03', 'Ремонт')
+                .work-order__col 
+                    +orderItem('04', 'оплата')
+
+
+mixin orderItem(number, title)
+    .order-item
+        .order-item__number= number
+        .order-item__title= title

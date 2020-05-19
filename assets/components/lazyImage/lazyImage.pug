@@ -1,0 +1,7 @@
+mixin lazyImage(className, srcMobile, srcLaptop, srcDesktop, alt )
+    img(class=`${className} lz-loading`,
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        data-src-m=srcMobile,
+        data-src-sm=srcLaptop,
+        data-src-lg=srcDesktop,
+        data-alt=alt)

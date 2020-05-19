@@ -1,0 +1,32 @@
+mixin destruction()
+    - var img = require("./../images/item_2.png").default;
+    .destruction
+        .container
+            h5.destruction__title Частые неисправности стиральных машин
+            p.destruction__description Рекомендуем получить бесплатную консультацию по неисправности Вашей техники
+            .destruction__wrapper
+                .destruction__image-wrapper
+                    img.destruction__image(src=img)
+                ul.destruction__list
+                    li.destruction__item Не включается стиральная машина
+                    li.destruction__item Подсветка кода неисправности
+                    li.destruction__item Неисправность двигателя
+                    li.destruction__item Не вращается барабан
+                    li.destruction__item Стиральная машина не открывается
+                    li.destruction__item Протечки уплотнительной манжеты
+                    li.destruction__item Не нагревается вода
+                    li.destruction__item Протечки шлангов
+                    li.destruction__item Течь из под люка
+                    li.destruction__item Не работает слив
+                    li.destruction__item Не включается стиральная машина
+                    li.destruction__item Подсветка кода неисправности
+                    li.destruction__item Неисправность двигателя
+                    li.destruction__item Не вращается барабан
+                    li.destruction__item Стиральная машина не открывается
+                    li.destruction__item Протечки уплотнительной манжеты
+                    li.destruction__item Не нагревается вода
+                    li.destruction__item Протечки шлангов
+                    li.destruction__item Течь из под люка
+                    li.destruction__item Не работает слив
+                .destruction__button-wrapper
+                    +free-consultation("Бесплатная Консультация", 'destruction__button')

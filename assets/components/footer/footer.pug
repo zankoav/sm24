@@ -1,2 +1,35 @@
 mixin footer()
-    footer.footer Footer
+    - var logoIcon = require("./../images/edited.svg").default;
+    footer.footer
+        .container
+            .footer__top
+                .footer__top-left
+                    a.footer__top-home-link(href='/')
+                        .footer__top-logo-wrapper
+                            img.footer__top-logo(src=logoIcon)
+                        .footer__top-name SM24.BY 
+                    p.footer__top-description Поломка стиральной машины доставляет значительные неудобства. Альтернатива тратить время на ручное полоскание вещей в тазике выглядит неубедительно. При первых проявлениях признаков неисправности рекомендуем сразу же обратиться к мастерам сервиса. Это недорогой, быстрый и надежный способ решить проблему с вышедшей из строя техникой. Выполняем ремонт стиральных машин в Минске с обслуживанием всех районов столицы (Центральный, Партизанский, Октябрьский, Ленинский, Советский, Первомайский, Заводской, Фрунзенский, Московский).
+                .footer__top-right
+                    .footer__top-title 5 причин довериться профессионалам:
+                    ul.footer__top-list
+                        li.footer__top-item Работаем только официально;
+                        li.footer__top-item Перед ремонтом проводится диагностика;
+                        li.footer__top-item Обладаем 10-летним опытом;
+                        li.footer__top-item Отсутствие дополнительных несогласованных расходов;
+                        li.footer__top-item Оперативно выезжаем на вызов и быстро выполняем работу.
+            .footer__bottom
+                .footer__bottom-block 
+                    .footer__bottom-phones
+                        a(href="tel:+375 (25) 550-57-69").footer__phones-item.footer__phones-item_life +375 (25) 550-57-69
+                        a(href="tel:+375 (29) 864-77-49").footer__phones-item.footer__phones-item_mts +375 (29) 864-77-49
+                        a(href="javascript:void(0)").footer__phones-order-call заказать звонок
+                    .footer__bottom-socials
+                        a(href="telegram.me/@zankoav").footer__socials-item.footer__socials-item_telegram        
+                        a(href="https://vk.com").footer__socials-item.footer__socials-item_vk 
+                .footer__bottom-button-wrapper
+                    +free-consultation("Вызов мастера", 'footer__bottom-button')
+            .footer__copy
+                span.footer__copy-text &copy; CopyRight 2020
+                span.footer__copy-developer-wrapper
+                    span.footer__copy-developer-before By
+                    a.footer__copy-developer(href='https://lightning-soft.com', target="_blank") Lightning Soft

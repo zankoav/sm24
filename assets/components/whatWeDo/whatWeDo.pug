@@ -1,0 +1,25 @@
+mixin whatWeDo()
+    - var img1 = require("./../images/mashine_1.svg").default;
+    - var img3 = require("./../images/mashine_2.svg").default;
+    - var img2 = require("./../images/mashine_3.svg").default;
+    - var img4 = require("./../images/mashine_4.svg").default;
+    .what-we-do
+        .container
+            .what-we-do__title Что мы делаем?
+            .what-we-do__wrapper
+                .what-we-do__col
+                    +whatWeDoItem(img1, 'Стиральные машины', 'Indesit, LG, Hotpoint Ariston, Bosch, Electrolux, Siemens, Samsung и многие другие')
+                .what-we-do__col 
+                    +whatWeDoItem(img2, 'Микроволновые (свч печи)', 'Supra, Midea, Gorenje, Samsung, Sharp, Horizont, LG, Wollme и многие другие')
+                .what-we-do__col 
+                    +whatWeDoItem(img3, 'Пылесосы', 'Samsung, Karcher, Thomas Twin, Philips, LG, Dyson, Redmond, Morpy и многие другие')
+                .what-we-do__col
+                    +whatWeDoItem(img4, 'Посудомойки', 'Bosch, Gorenje, Hotpoint-Ariston, Electrolux, Beko, Zanussi, Сandy, Siemens и многие другие')
+
+
+mixin whatWeDoItem(icon, title, description)
+    .what-we-do-item
+        img.what-we-do-item__icon(src=icon)
+        h6.what-we-do-item__title=title
+        p.what-we-do-item__description=description
+            

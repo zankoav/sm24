@@ -1,0 +1,68 @@
+mixin marks()
+    - var img1 = require("./../images/m1.png").default;
+    - var img2 = require("./../images/m2.png").default;
+    - var img3 = require("./../images/m3.png").default;
+    - var img4 = require("./../images/m4.png").default;
+    - var img5 = require("./../images/m5.png").default;
+    - var img6 = require("./../images/m6.png").default;
+    - var img7 = require("./../images/m7.png").default;
+    - var img8 = require("./../images/m8.png").default;
+    - var img9 = require("./../images/m9.png").default;
+    - var img11 = require("./../images/m11.png").default;
+    - var img12 = require("./../images/m12.png").default;
+    - var img13 = require("./../images/m13.png").default;
+    - var img14 = require("./../images/m14.png").default;
+    - var img15 = require("./../images/m15.png").default;
+    - var img16 = require("./../images/m16.png").default;
+    - var img17 = require("./../images/m17.png").default;
+    - var img18 = require("./../images/m18.png").default;
+    - var img19 = require("./../images/m19.png").default;
+    - var img20 = require("./../images/m20.png").default;
+    .marks
+        .container
+            h5.marks__title Чиним все основные марки бытовой техники
+            p.marks__description Если вашей стиралки нету в списке, то мы всё равно ее починим
+            .marks__list
+                .marks__col
+                    +mark(img1, "AEG")
+                .marks__col
+                    +mark(img2, "Ardo")
+                .marks__col
+                    +mark(img3, "Ariston")
+                .marks__col
+                    +mark(img4, "Miele")
+                .marks__col
+                    +mark(img5, "Neff")
+                .marks__col
+                    +mark(img6, "Sumsung")
+                .marks__col
+                    +mark(img7, "Siemens")
+                .marks__col
+                    +mark(img8, "Smeg")
+                .marks__col
+                    +mark(img9, "Whirlpool")
+                .marks__col
+                    +mark(img11, "Candy")
+                .marks__col
+                    +mark(img12, "Electrolux")
+                .marks__col
+                    +mark(img13, "Gorenje")
+                .marks__col
+                    +mark(img14, "Hansa")
+                .marks__col
+                    +mark(img15, "Indesit")
+                .marks__col
+                    +mark(img16, "Kaiser")
+                .marks__col
+                    +mark(img17, "LG")
+                .marks__col
+                    +mark(img18, "Zanussi")
+                .marks__col
+                    +mark(img19, "Asko")
+                .marks__col
+                    +mark(img20, "Bosch")
+
+mixin mark(img, title)
+    .mark
+        img.mark__img(src=img)
+        h6.mark__title=title

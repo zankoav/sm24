@@ -1,0 +1,110 @@
+@import "./../../common/constants";
+
+.work-order {
+    padding: 3rem 0;
+
+    @include sm {
+        padding: 4rem 0;
+    }
+
+    @include lg {
+        padding: 6rem 0;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include sm{
+            font-size: 22px;
+            margin-bottom: 2.5rem;
+        }
+
+        @include lg{
+            font-size: 24px;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: initial;
+        margin: {
+            left: -1rem;
+            right: -1rem;
+        };
+    }
+
+    &__col{
+        padding: 0 1rem;
+        max-width: 100%;
+        flex: 1 0 100%;
+        margin-bottom: 1rem;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        @include sm{
+            max-width: 50%;
+            flex: 1 0 50%;
+        }
+
+        @include lg{
+            max-width: 25%;
+            flex: 1 0 25%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.order-item{
+    text-align: center;
+
+    &:after{
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 3px;
+        background-color: $GRAY4;
+        margin: 0 auto;
+    }
+
+    &__number{
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        color: $PRIMARY1;
+
+        @include sm{
+            font-size: 44px; 
+        }
+
+        @include lg{
+            align-self: flex-start;
+            line-height: normal;
+            font-size: 56px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__title{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+
+        @include sm{
+            font-size: 18px; 
+        }
+    }
+}

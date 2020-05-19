@@ -1,0 +1,98 @@
+@import "./../../common/constants";
+
+.advantages {
+    padding: 0 0 2rem;
+
+    @include sm {
+        padding: 0 0 3rem; 
+    }
+
+    @include lg {
+        padding: 0 0 4rem; 
+    }
+
+    &__wrapper{
+        max-width: initial;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__col{
+        max-width: 100%;
+        flex: 1 0 100%;
+        padding: 0 1rem 1.5rem;
+
+        @include sm {
+            max-width: 33.333%;
+            flex: 1 0 33.333%;
+            padding-bottom: 0;
+        }
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+}
+
+.advantage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include lg{
+        text-align: left;
+        flex-direction: row;
+    }
+
+    &__number{
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        color: $PRIMARY1;
+
+        @include sm{
+            font-size: 44px; 
+        }
+
+        @include lg{
+            align-self: flex-start;
+            line-height: normal;
+            font-size: 48px;
+            flex-shrink: 0;
+            padding-right: 1.5rem;
+            margin-right: 1.5rem;
+            border-right: 2px solid $GRAY1;
+        }
+    }
+
+    &__title{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: .75rem;
+
+        @include sm{
+            font-size: 22px; 
+            margin-bottom: 1rem;
+        }
+
+        @include lg{
+            font-size: 24px; 
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__description{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: $GRAY2;
+
+        @include sm{
+            font-size: 16px;
+        }
+    }
+}
