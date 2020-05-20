@@ -3,9 +3,11 @@ doctype html
 html
     +head()
     body
-        +header()
+        +header(true)
         main.p404
-            h1.p404__title Ошибка 404!
-            h2.p404__subtitle Страница не найдена
+            .container
+                .p404__wrapper
+                    h1.p404__title Ошибка 404!
+                    h2.p404__subtitle Страница не найдена
         +footer()
             

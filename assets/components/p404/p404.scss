@@ -1,38 +1,57 @@
 @import "../../common/constants";
 
 .p404 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem 0;
-    background: url(./../../images/team.jpg) no-repeat;
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $GRAY2;
+        min-height: 180px;
+
+        @include sm{
+            min-height: 280px;
+        }
+
+        @include lg{
+            min-height: 380px;
+        }
+
+        @include hd{
+            min-height: 500px;
+        }
+
+        @include xhd{
+            min-height: 900px;
+        }
+    }
+    
 
     &__title{
-        color: $BLACK;
-        font-weight: 600;
-        font-size: 48px;
+      
+        font-weight: 500;
+        font-size: 40px;
         line-height: 1.5;
 
         @include sm{
             font-size: 64px;
         }
 
-        @include hd{
+        @include lg{
             font-size: 72px;
         }
     }
 
     &__subtitle{
-        color: $BLACK;
         font-size: 20px;
 
         @include sm{
             font-size: 24px;
         }
 
-        @include hd{
-            font-size: 32px;
+        @include lg{
+            font-size: 28px;
         }
     }
 }

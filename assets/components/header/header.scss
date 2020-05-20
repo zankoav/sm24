@@ -6,4 +6,11 @@
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
+
+    &_small{
+        height: initial;
+        min-height: initial;
+        max-height: initial;
+        padding-bottom: 1.5rem;
+    }
 }

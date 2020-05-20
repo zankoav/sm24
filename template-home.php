@@ -48,6 +48,29 @@
     $we_do_title_4 = get_post_meta($post_id, 'we_do_title_4', 1 );
     $we_do_description_4 = get_post_meta($post_id, 'we_do_description_4', 1 );
     $we_do_image_4 = get_post_meta($post_id, 'we_do_image_4', 1 );
+    $order_title = get_post_meta($post_id, 'order_title', 1 );
+    $order_title_1 = get_post_meta($post_id, 'order_title_1', 1 );
+    $order_title_2 = get_post_meta($post_id, 'order_title_2', 1 );
+    $order_title_3 = get_post_meta($post_id, 'order_title_3', 1 );
+    $order_title_4 = get_post_meta($post_id, 'order_title_4', 1 );
+    $faq_title = get_post_meta($post_id, 'faq_title', 1 );
+    $faq_description = get_post_meta($post_id, 'faq_description', 1 );
+    $faq_image = get_post_meta($post_id, 'faq_image', 1 );
+    $faq_button_title = get_post_meta($post_id, 'faq_button_title', 1 );
+    $faq_list = get_post_meta($post_id, 'faq_list', 1 );
+    $marks_title = get_post_meta($post_id, 'marks_title', 1 );
+    $marks_description = get_post_meta($post_id, 'marks_description', 1 );
+    $marks_item = get_post_meta($post_id, 'marks_item', 1 );
+    $content_right_title = get_post_meta($post_id, 'content_right_title', 1 );
+    $content_right_image = get_post_meta($post_id, 'content_right_image', 1 );
+    $content_right_description = wpautop(get_post_meta($post_id, 'content_right_description', 1 ));
+    $content_left_title = get_post_meta($post_id, 'content_left_title', 1 );
+    $content_left_image = get_post_meta($post_id, 'content_left_image', 1 );
+    $content_left_description = wpautop(get_post_meta($post_id, 'content_left_description', 1 ));
+    $footer_title = get_post_meta($post_id, 'footer_title', 1 );
+    $footer_description = get_post_meta($post_id, 'footer_description', 1 );
+    $footer_button_title = get_post_meta($post_id, 'footer_button_title', 1 );
+    $footer_list = get_post_meta($post_id, 'footer_list', 1 );
 
 	get_header();
     if ( have_posts() ): ?>
@@ -215,30 +238,30 @@
     </div>
     <div class="work-order">
         <div class="container">
-            <div class="work-order__title">Порядок работы</div>
+            <div class="work-order__title"><?=$order_title;?></div>
             <div class="work-order__wrapper">
                 <div class="work-order__col">
                     <div class="order-item">
                         <div class="order-item__number">01</div>
-                        <div class="order-item__title">Вызов мастера</div>
+                        <div class="order-item__title"><?=$order_title_1;?></div>
                     </div>
                 </div>
                 <div class="work-order__col">
                     <div class="order-item">
                         <div class="order-item__number">02</div>
-                        <div class="order-item__title">диагностика</div>
+                        <div class="order-item__title"><?=$order_title_2;?></div>
                     </div>
                 </div>
                 <div class="work-order__col">
                     <div class="order-item">
                         <div class="order-item__number">03</div>
-                        <div class="order-item__title">Ремонт</div>
+                        <div class="order-item__title"><?=$order_title_3;?></div>
                     </div>
                 </div>
                 <div class="work-order__col">
                     <div class="order-item">
                         <div class="order-item__number">04</div>
-                        <div class="order-item__title">оплата</div>
+                        <div class="order-item__title"><?=$order_title_4;?></div>
                     </div>
                 </div>
             </div>
@@ -246,158 +269,53 @@
     </div>
     <div class="destruction">
         <div class="container">
-            <h5 class="destruction__title">Частые неисправности стиральных машин</h5>
-            <p class="destruction__description">Рекомендуем получить бесплатную консультацию по
-                неисправности Вашей техники</p>
+            <h5 class="destruction__title"><?=$faq_title;?></h5>
+            <p class="destruction__description"><?=$faq_description;?></p>
             <div class="destruction__wrapper">
-                <div class="destruction__image-wrapper"><img class="destruction__image"
-                         src="/wp-content/themes/sm24/src/icons/item_2.9e3105.png"></div>
+                <div class="destruction__image-wrapper">
+                    <img class="destruction__image"
+                         src="<?=$faq_image;?>"></div>
                 <ul class="destruction__list">
-                    <li class="destruction__item">Не включается стиральная машина</li>
-                    <li class="destruction__item">Подсветка кода неисправности</li>
-                    <li class="destruction__item">Неисправность двигателя</li>
-                    <li class="destruction__item">Не вращается барабан</li>
-                    <li class="destruction__item">Стиральная машина не открывается</li>
-                    <li class="destruction__item">Протечки уплотнительной манжеты</li>
-                    <li class="destruction__item">Не нагревается вода</li>
-                    <li class="destruction__item">Протечки шлангов</li>
-                    <li class="destruction__item">Течь из под люка</li>
-                    <li class="destruction__item">Не работает слив</li>
-                    <li class="destruction__item">Не включается стиральная машина</li>
-                    <li class="destruction__item">Подсветка кода неисправности</li>
-                    <li class="destruction__item">Неисправность двигателя</li>
-                    <li class="destruction__item">Не вращается барабан</li>
-                    <li class="destruction__item">Стиральная машина не открывается</li>
-                    <li class="destruction__item">Протечки уплотнительной манжеты</li>
-                    <li class="destruction__item">Не нагревается вода</li>
-                    <li class="destruction__item">Протечки шлангов</li>
-                    <li class="destruction__item">Течь из под люка</li>
-                    <li class="destruction__item">Не работает слив</li>
+                    <?php foreach ( $faq_list as $faq_item) : ?>
+                    <li class="destruction__item"><?=$faq_item;?></li>
+                    <?php endforeach; ?>
                 </ul>
                 <div class="destruction__button-wrapper"><a
                        class="free-consultation destruction__button"
-                       href="javascript:void(0)">Бесплатная Консультация</a></div>
+                       href="javascript:void(0)"><?=$faq_button_title;?></a></div>
             </div>
         </div>
     </div>
     <div class="marks">
         <div class="container">
-            <h5 class="marks__title">Чиним все основные марки бытовой техники</h5>
-            <p class="marks__description">Если вашей стиралки нету в списке, то мы всё равно ее
-                починим</p>
+            <h5 class="marks__title"><?=$marks_title;?></h5>
+            <p class="marks__description"><?=$marks_description;?></p>
             <div class="marks__list">
+                <?php foreach ($marks_item as $mark_item) :
+                    $title = $mark_item['title'];
+                    $image = $mark_item['image'];                  
+                ?>
                 <div class="marks__col">
                     <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m1.c47054.png">
-                        <h6 class="mark__title">AEG</h6>
+                             src="<?=$image;?>">
+                        <h6 class="mark__title"><?=$title;?></h6>
                     </div>
                 </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m2.166302.png">
-                        <h6 class="mark__title">Ardo</h6>
-                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <div class="text-content">
+        <div class="container">
+            <div class="text-content__wrapper">
+                <div class="text-content__image-wrapper ">
+                    <img class="text-content__image"
+                         src="<?=$content_right_image;?>">
                 </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m3.e861e0.png">
-                        <h6 class="mark__title">Ariston</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m4.d8a26c.png">
-                        <h6 class="mark__title">Miele</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m5.4a02e5.png">
-                        <h6 class="mark__title">Neff</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m6.3f024f.png">
-                        <h6 class="mark__title">Sumsung</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m7.2b3984.png">
-                        <h6 class="mark__title">Siemens</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m8.5cc648.png">
-                        <h6 class="mark__title">Smeg</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m9.d1a17d.png">
-                        <h6 class="mark__title">Whirlpool</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m11.e612a5.png">
-                        <h6 class="mark__title">Candy</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m12.9ae073.png">
-                        <h6 class="mark__title">Electrolux</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m13.71d4f8.png">
-                        <h6 class="mark__title">Gorenje</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m14.f660c9.png">
-                        <h6 class="mark__title">Hansa</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m15.b79c3d.png">
-                        <h6 class="mark__title">Indesit</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m16.aa87ac.png">
-                        <h6 class="mark__title">Kaiser</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m17.83fed0.png">
-                        <h6 class="mark__title">LG</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m18.252aa3.png">
-                        <h6 class="mark__title">Zanussi</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m19.c4f955.png">
-                        <h6 class="mark__title">Asko</h6>
-                    </div>
-                </div>
-                <div class="marks__col">
-                    <div class="mark"><img class="mark__img"
-                             src="/wp-content/themes/sm24/src/icons/m20.abfbef.png">
-                        <h6 class="mark__title">Bosch</h6>
+                <div class="text-content__text">
+                    <div class="text-content__title"><?=$content_right_title;?></div>
+                    <div class="text-content__description editor-content">
+                        <?=$content_right_description;?>
                     </div>
                 </div>
             </div>
@@ -406,57 +324,14 @@
     <div class="text-content">
         <div class="container">
             <div class="text-content__wrapper">
-                <div class="text-content__image-wrapper "><img class="text-content__image"
-                         src="/wp-content/themes/sm24/src/icons/item_3.5a2184.png"></div>
-                <div class="text-content__text">
-                    <div class="text-content__title">Можно ли отремонтировать машинку в Минске
-                        по приемлемым ценам?</div>
-                    <div class="text-content__description editor-content">
-                        <p>Любая техника имеет свой срок службы и каждый агрегат рано или поздно
-                            выходит из строя. Именно поэтому одной из самых распространенных
-                            услуг является ремонт стиральных машин в Минске.</p>
-                        <p>Вряд ли сейчас можно найти семью без столь нужного агрегата, различие
-                            может быть только в объемах и частоте стирок, причем чем чаще
-                            эксплуатируется агрегат, тем скорее приходят в негодность детали и
-                            чаще требуется обслуживать вашу технику. Зачастую, цены на ремонт
-                            стиралок в Минске не очень отличаются от области, но могут разниться
-                            исходя из причины поломки, сложности починки, стоимости замененных
-                            деталей и комплектующих. Услуга может стоить дешевле или дороже в
-                            зависимости от того, где именно мастера берут запчасти, какая
-                            наценка и пр.</p>
-                        <p>В «SM24» обслуживание вашей техники с заменых деталей обходится
-                            дешевле за счет прямых закупок, комплектующих по заводской цене от
-                            большинства производителей.</p>
-                    </div>
+                <div class="text-content__image-wrapper text-content__image-wrapper_left">
+                    <img class="text-content__image"
+                         src="<?=$content_left_image;?>">
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-content">
-        <div class="container">
-            <div class="text-content__wrapper">
-                <div class="text-content__image-wrapper text-content__image-wrapper_left"><img
-                         class="text-content__image"
-                         src="/wp-content/themes/sm24/src/icons/item_4.1f2e0e.png"></div>
                 <div class="text-content__text">
-                    <div class="text-content__title">95% ремонтов стиральных машин производится
-                        на дому</div>
+                    <div class="text-content__title"><?=$content_left_title;?></div>
                     <div class="text-content__description editor-content">
-                        <p>К счастью, уже нет необходимости везти технику в мастерскую, чтобы ее
-                            починить. Практически любая работа в данной сфере услуг может быть
-                            выполнена даже в день обращения, при условии, что владелец
-                            максимально точно описал характер проблемы мастеру, а в сервисном
-                            центре имеются запчасти для этой конкретной модели.</p>
-                        <p>Но не только возможность исправить машинку в домашних условиях
-                            привлекает людей – установка тоже требует внимательного отношения и
-                            соответствующих навыков. Опыт работы «SM24» показывает, что именно
-                            неправильное подключение приводит к скорому износу и в результате
-                            требуется как ремонт самой стиральной машины, так и починка
-                            проводки, настройка водопровода и слива.</p>
-                        <p>Что касается цены на услугу в Минске, то она может отличаться не
-                            только в связи со сложностью ремонтных работ, но и из-за стоимости
-                            комплектующих, которые часто закупаются мастерами у перекупщиков, а
-                            потому имеют двойную наценку.</p>
+                        <?=$content_left_description;?>
                     </div>
                 </div>
             </div>
@@ -466,59 +341,59 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
-            <div class="footer__top-left"><a class="footer__top-home-link"
+            <div class="footer__top-left">
+                <a class="footer__top-home-link"
                    href="/">
-                    <div class="footer__top-logo-wrapper"><img class="footer__top-logo"
-                             src="/wp-content/themes/sm24/src/icons/edited.b2b9a8.svg"></div>
-                    <div class="footer__top-name">SM24.BY </div>
+                    <div class="footer__top-logo-wrapper">
+                        <img class="footer__top-logo"
+                             src="/wp-content/themes/sm24/src/icons/edited.b2b9a8.svg">
+                    </div>
+                    <div class="footer__top-name">SM24.BY</div>
                 </a>
-                <p class="footer__top-description">Поломка стиральной машины доставляет
-                    значительные неудобства. Альтернатива тратить время на ручное полоскание
-                    вещей в тазике выглядит неубедительно. При первых проявлениях признаков
-                    неисправности рекомендуем сразу же обратиться к мастерам сервиса. Это
-                    недорогой, быстрый и надежный способ решить проблему с вышедшей из строя
-                    техникой. Выполняем ремонт стиральных машин в Минске с обслуживанием всех
-                    районов столицы (Центральный, Партизанский, Октябрьский, Ленинский,
-                    Советский, Первомайский, Заводской, Фрунзенский, Московский).</p>
+                <p class="footer__top-description"><?=$footer_description;?></p>
             </div>
             <div class="footer__top-right">
-                <div class="footer__top-title">5 причин довериться профессионалам:</div>
+                <div class="footer__top-title"><?=$footer_title;?></div>
                 <ul class="footer__top-list">
-                    <li class="footer__top-item">Работаем только официально;</li>
-                    <li class="footer__top-item">Перед ремонтом проводится диагностика;</li>
-                    <li class="footer__top-item">Обладаем 10-летним опытом;</li>
-                    <li class="footer__top-item">Отсутствие дополнительных несогласованных
-                        расходов;</li>
-                    <li class="footer__top-item">Оперативно выезжаем на вызов и быстро выполняем
-                        работу.</li>
+                    <?php foreach ( $footer_list as $footer_item) : ?>
+                    <li class="footer__top-item"><?=$footer_item;?></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
         <div class="footer__bottom">
             <div class="footer__bottom-block">
-                <div class="footer__bottom-phones"><a
-                       class="footer__phones-item footer__phones-item_life"
-                       href="tel:+375 (25) 550-57-69">+375 (25) 550-57-69</a><a
-                       class="footer__phones-item footer__phones-item_mts"
-                       href="tel:+375 (29) 864-77-49">+375 (29) 864-77-49</a><a
-                       class="footer__phones-order-call"
-                       href="javascript:void(0)">заказать звонок</a></div>
-                <div class="footer__bottom-socials"><a
-                       class="footer__socials-item footer__socials-item_telegram"
-                       href="telegram.me/@zankoav"> </a><a
-                       class="footer__socials-item footer__socials-item_vk"
-                       href="https://vk.com"> </a></div>
+                <div class="footer__bottom-phones">
+                    <a class="footer__phones-item footer__phones-item_life"
+                       href="tel:<?= $life;?>"><?= $life;?></a>
+                    <a class="footer__phones-item footer__phones-item_mts"
+                       href="tel:<?= $mtc;?>"><?= $mtc;?></a>
+                    <a class="footer__phones-order-call"
+                       href="javascript:void(0)">заказать звонок</a>
+                </div>
+                <div class="footer__bottom-socials">
+                    <a class="footer__socials-item footer__socials-item_telegram"
+                       href="https://telegram.im/<?=$telegram;?>"
+                       target="_blank"></a>
+                    <a class="footer__socials-item footer__socials-item_vk"
+                       href="<?=$vk;?>"
+                       target="_blank"></a>
+                </div>
             </div>
-            <div class="footer__bottom-button-wrapper"><a
-                   class="free-consultation footer__bottom-button"
-                   href="javascript:void(0)">Вызов мастера</a></div>
+            <div class="footer__bottom-button-wrapper">
+                <a class="free-consultation footer__bottom-button"
+                   href="javascript:void(0)"><?=$footer_button_title;?></a>
+            </div>
         </div>
-        <div class="footer__copy"><span class="footer__copy-text">&copy; CopyRight
-                2020</span><span class="footer__copy-developer-wrapper"><span
-                      class="footer__copy-developer-before">By</span><a
-                   class="footer__copy-developer"
+        <div class="footer__copy">
+            <span class="footer__copy-text">&copy; CopyRight <?=date('Y');?></span>
+            <span class="footer__copy-developer-wrapper">
+                <span class="footer__copy-developer-before">By</span>
+                <a class="footer__copy-developer"
                    href="https://lightning-soft.com"
-                   target="_blank">Lightning Soft</a></span></div>
+                   target="_blank">Lightning Soft</a>
+            </span>
+        </div>
     </div>
 </footer>
 <div class="modal">

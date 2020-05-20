@@ -75,6 +75,7 @@ function common_metabox()
             'add_button' => 'Добавить слайд',
             'remove_button' => 'Удалить слайд',
             'closed' => true,
+            'sortable'          => true,
         ),
     ));
 
@@ -332,6 +333,206 @@ function common_metabox()
         'id' => 'we_do_image_4',
         'type' => 'file'
     ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Порядок работ',
+        'id' => 'order_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок Секции',
+        'id' => 'order_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 1',
+        'id' => 'order_title_1',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 2',
+        'id' => 'order_title_2',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 3',
+        'id' => 'order_title_3',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок 4',
+        'id' => 'order_title_4',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Частые Неисправности',
+        'id' => 'faq_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'faq_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание',
+        'id' => 'faq_description',
+        'type' => 'textarea_small'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка',
+        'id' => 'faq_image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок Кнопки',
+        'id' => 'faq_button_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Список',
+        'id' => 'faq_list',
+        'type' => 'text',
+        'repeatable' => true
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Марки бытовой техники',
+        'id' => 'marks_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'marks_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание',
+        'id' => 'marks_description',
+        'type' => 'textarea_small'
+    ));
+
+    $marks_field_id = $cmb_options->add_field(array(
+        'id' => 'marks_item',
+        'type' => 'group',
+        'options' => array(
+            'group_title' => 'Марка {#}',
+            'add_button' => 'Добавить марку',
+            'remove_button' => 'Удалить марку',
+            'closed' => true,
+            'sortable'          => true,
+        ),
+    ));
+
+    $cmb_options->add_group_field($marks_field_id, array(
+        'name' => 'Заголовок',
+        'id' => 'title',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_group_field($marks_field_id, array(
+        'name' => 'Картинка',
+        'desc' => 'Рекомендуемый размер (160x80)',
+        'id' => 'image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Текст с картинкой справа',
+        'id' => 'content_right_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'content_right_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка',
+        'desc' => 'Рекомендуемый размер (360x360)',
+        'id' => 'content_right_image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание',
+        'id' => 'content_right_description',
+        'type' => 'wysiwyg'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Текст с картинкой слево',
+        'id' => 'content_left_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'content_left_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Картинка',
+        'desc' => 'Рекомендуемый размер (360x360)',
+        'id' => 'content_left_image',
+        'type' => 'file'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание',
+        'id' => 'content_left_description',
+        'type' => 'wysiwyg'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Подвал',
+        'id' => 'footer_t',
+        'type' => 'title'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок',
+        'id' => 'footer_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Описание',
+        'id' => 'footer_description',
+        'type' => 'textarea'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Заголовок Кнопки',
+        'id' => 'footer_button_title',
+        'type' => 'text'
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => 'Список',
+        'id' => 'footer_list',
+        'type' => 'text',
+        'repeatable' => true
+    ));
+
+
+
 
     // $cmb_options->add_field(array(
     //     'name' => __('Paragraphs', THEME_NAME),

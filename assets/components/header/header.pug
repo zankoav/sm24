@@ -1,4 +1,5 @@
-mixin header()
-    header.header
-        +contacts()   
-        +main-slider()
+mixin header(isSmall)
+    header(class=`header ${isSmall ? 'header_small' : ''}`)
+        +contacts()
+        - if(!isSmall) 
+            +main-slider()

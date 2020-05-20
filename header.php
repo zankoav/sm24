@@ -1,9 +1,7 @@
 <?php 
-
     if ( ! defined( 'ABSPATH' ) ) {
         exit();
     }
-	$options  = SingletonOptions::getOptions();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
