@@ -5,7 +5,7 @@ import { showModal } from './../modal/modal';
 
 new Swiper('.main-slider__swiper', {
     autoplay: {
-        delay: 3000,
+        delay: 6000,
     },
     loop: true,
     lazy: {
