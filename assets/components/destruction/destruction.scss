@@ -111,6 +111,8 @@
         @include lg {
             column-count: 2;
             column-gap: 2rem;
+            max-width: calc(100% - 432px);
+            flex: 1 0 calc(100% - 432px);
         }
     }
     
