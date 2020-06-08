@@ -29,7 +29,9 @@
 		 */
 		// add_theme_support( 'custom-logo' );
 
-		// add_theme_support( 'menus' );
+        // add_theme_support( 'menus' );
+        
+        add_theme_support( 'title-tag' );
 
 		// register_nav_menu( 'main-menu', 'Main Menu' );
 		// register_nav_menu( 'left-menu', 'Left Menu' );
@@ -54,5 +56,5 @@
     function my_deregister_scripts(){
         wp_deregister_script( 'wp-embed' );
     }
-    
+
     add_action( 'wp_footer', 'my_deregister_scripts' );
