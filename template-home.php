@@ -71,6 +71,7 @@
     $footer_description = get_post_meta($post_id, 'footer_description', 1 );
     $footer_button_title = get_post_meta($post_id, 'footer_button_title', 1 );
     $footer_list = get_post_meta($post_id, 'footer_list', 1 );
+    $footer_unp = get_post_meta($post_id, 'footer_unp', 1 ); //УНП 690867537
 
 	get_header();
     if ( have_posts() ): ?>
@@ -387,6 +388,7 @@
         </div>
         <div class="footer__copy">
             <span class="footer__copy-text">&copy; CopyRight <?=date('Y');?></span>
+            <span class="footer__copy-unp"><?=$footer_unp;?></span>
             <span class="footer__copy-developer-wrapper">
                 <span class="footer__copy-developer-before">By</span>
                 <a class="footer__copy-developer"

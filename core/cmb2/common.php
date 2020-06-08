@@ -531,6 +531,12 @@ function common_metabox()
         'repeatable' => true
     ));
 
+    $cmb_options->add_field(array(
+        'name' => 'УНП',
+        'id' => 'footer_unp',
+        'type' => 'text'
+    ));
+
 
 
 
