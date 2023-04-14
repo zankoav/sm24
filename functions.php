@@ -15,10 +15,46 @@
 	require_once __DIR__ . '/utils/Assets.php';
 	require_once __DIR__ . '/utils/SingletonOptions.php';
 	require_once __DIR__ . '/core/init_theme.php';
-	// require_once __DIR__ . '/core/menu.php';
-	require_once __DIR__ . '/core/styles.php';
-	require_once __DIR__ . '/core/scripts.php';
 	require_once __DIR__ . '/core/cmb2/common.php';
-	// require_once __DIR__ . '/core/cmb2/worker.php';
-	// require_once __DIR__ . '/core/cmb2/project.php';
 	require_once __DIR__ . '/core/ajax.php';
+
+
+    add_action( 'wp_enqueue_scripts', 'page_scripts');
+
+function page_scripts(){
+    wp_dequeue_script('jquery');
+    wp_dequeue_script('jquery-core');
+    wp_dequeue_script('jquery-migrate');
+
+    $assets = new Assets();
+
+    $runtime = $assets->asset('runtime.js');
+    wp_enqueue_script( 'runtime', $runtime);
+
+    $vendors = $assets->asset('vendors.js');
+	wp_enqueue_script( 'vendors', $vendors);
+
+    if(is_page_template('template-home.php')){
+        $target = $assets->asset('home.js');
+        wp_enqueue_script( 'home', $target);
+    }else if(is_404()){
+        $target = $assets->asset('p404.js');
+        wp_enqueue_script( 'p404', $target);
+    }
+
+    add_filter( 'script_loader_tag', 'change_my_script', 10, 3 );
+
+	function change_my_script( $tag, $handle, $src ){
+
+		if( 
+            'p404' === $handle or
+            'home' === $handle or
+            'runtime' === $handle or
+            'vendors' === $handle
+        ){
+			return str_replace( ' src', ' defer src', $tag );
+		}
+
+		return $tag;
+	}
+}

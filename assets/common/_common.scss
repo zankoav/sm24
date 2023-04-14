@@ -1,14 +1,10 @@
-@import "fonts";
-@import "reset";
-@import "constants";
-
-//  @import "./../../node_modules/swiper/css/swiper.min.css";
-// @import '~@fortawesome/fontawesome-free/css/all';
-
-@import "./../../node_modules/swiper/css/swiper.min.css";
+@import 'fonts';
+@import 'reset';
+@import 'constants';
 
 body {
     font-family: 'Open Sans', sans-serif;
+    display: block;
 }
 
 @include container();

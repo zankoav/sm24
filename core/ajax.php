@@ -1,6 +1,5 @@
 <?php
-
-
+    use Ls\Wp\Log as Log;
 
 	function set_html_content_type() {
 		return "text/html";
@@ -9,8 +8,9 @@
 	add_filter( 'wp_mail_content_type', 'set_html_content_type' );
 
 	function contact_form() {
+        
         $mail_to = get_post_meta($_POST['id'], 'email', 1 );
-		$subject = __( 'Вызов из сайта SM24.BY!', THEME_NAME );
+		$subject = 'Вызов из сайта SM24.BY!';
 		$headers = 'From: SM24.BY <'.$mail_to.'>' . "\r\n";
 
 		$response           = array();
@@ -33,6 +33,7 @@
 		}
 
 		echo json_encode( $response );
+        Log::info('response', $response);
 		wp_die();
 	}
 

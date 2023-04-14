@@ -1,22 +1,24 @@
-import './mainSlider.scss';
-import $ from 'jquery';
-import Swiper from 'swiper';
-import { showModal } from './../modal/modal';
+import './mainSlider.scss'
+import $ from 'jquery'
+import Swiper from 'swiper/bundle'
+
+import 'swiper/css/bundle'
+import { showModal } from './../modal/modal'
 
 new Swiper('.main-slider__swiper', {
     autoplay: {
-        delay: 6000,
+        delay: 45000
     },
     loop: true,
     lazy: {
-        loadPrevNext: true,
+        loadPrevNext: true
     },
     parallax: true,
     pagination: {
         el: '.main-slider__pagination',
         clickable: true,
-        bulletClass: "main-slider__bullet",
-        bulletActiveClass: "main-slider__bullet_active"
+        bulletClass: 'main-slider__bullet',
+        bulletActiveClass: 'main-slider__bullet_active'
     },
     effect: 'fade',
     fadeEffect: {
@@ -25,6 +27,6 @@ new Swiper('.main-slider__swiper', {
     disableOnInteraction: false,
     allowTouchMove: true,
     speed: 800
-});
+})
 
-$('.main-slider__content-item .free-consultation').on('click', showModal);
+$('.main-slider__content-item .free-consultation').on('click', showModal)

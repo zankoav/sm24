@@ -83,7 +83,7 @@ async function sendPhone() {
     startLoading();
     $.ajax({
         type: "POST",
-        url: landing_ajax.url,
+        url: landing_ajax,
         dataType: 'json',
         data: {
             phone: mask.value,

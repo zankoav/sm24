@@ -1,10 +1,9 @@
 mixin contacts()
-    - var logoIcon = require("./../images/edited.svg").default;
     .contacts
         .container.contacts__container
             a.contacts__logo(href="/")
                 .contacts__logo-image-wrapper
-                    img.contacts__logo-image(src=logoIcon, alt="sm24.by")
+                    img.contacts__logo-image(src=require('@img/edited.svg'), alt="sm24.by")
                 .contacts__logo-name SM24.BY 
             .contacts__block 
                 .contacts__phones

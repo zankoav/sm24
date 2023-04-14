@@ -90,7 +90,7 @@
                href="/">
                 <div class="contacts__logo-image-wrapper">
                     <img class="contacts__logo-image"
-                         src="/wp-content/themes/sm24/src/icons/edited.b2b9a8.svg"
+                         src="/wp-content/themes/sm24/build/img/a29b2e08f98938136821.svg"
                          alt="sm24.by"></div>
                 <div class="contacts__logo-name">SM24.BY</div>
             </a>
@@ -136,7 +136,7 @@
                                    href="javascript:void(0)"><?=$button_title;?></a>
                             </div>
                             <img class="swiper-lazy main-slider__img"
-                                 data-src="<?=$image;?>">
+                                 src="<?=$image;?>">
                         </div>
                     </div>
                 </div>
@@ -347,7 +347,7 @@
                    href="/">
                     <div class="footer__top-logo-wrapper">
                         <img class="footer__top-logo"
-                             src="/wp-content/themes/sm24/src/icons/edited.b2b9a8.svg">
+                             src="/wp-content/themes/sm24/build/img/a29b2e08f98938136821.svg">
                     </div>
                     <div class="footer__top-name">SM24.BY</div>
                 </a>
@@ -405,7 +405,7 @@
             <a class="call-me-form__close"
                href="javascript:void(0)">
                 <img class="call-me-form__close-img"
-                     src="/wp-content/themes/sm24/src/icons/cross.b39121.svg">
+                     src="/wp-content/themes/sm24/build/img/e7e0f54b7ef09d503a5f.svg">
             </a>
             <img class="call-me-form__img"
                  src="<?=$modal_image;?>">
@@ -414,7 +414,7 @@
                 <p class="call-me-form__description"><?=$modal_description;?></p>
                 <div class="call-me-form__input-group">
                     <img class="call-me-form__input-img"
-                         src="/wp-content/themes/sm24/src/icons/flag.b04c8e.png">
+                         src="/wp-content/themes/sm24/build/img/dee3d75fcb888689f04a.png">
                     <input class="call-me-form__input"
                            name="phone">
                 </div>
@@ -426,7 +426,7 @@
             </div>
             <div class="call-me-form__card call-me-form__card_loading call-me-form__card_hidden">
                 <img class="call-me-form__card-spinner"
-                     src="/wp-content/themes/sm24/src/icons/spinner.ab7b37.svg"><span
+                     src="/wp-content/themes/sm24/build/img/25b5835de3110fea8209.svg"><span
                       class="call-me-form__card-spinner-message">Отправка...</span>
             </div>
             <div class="call-me-form__card call-me-form__card_result call-me-form__card_hidden">

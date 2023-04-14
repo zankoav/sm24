@@ -1,12 +1,11 @@
 mixin footer()
-    - var logoIcon = require("./../images/edited.svg").default;
     footer.footer
         .container
             .footer__top
                 .footer__top-left
                     a.footer__top-home-link(href='/')
                         .footer__top-logo-wrapper
-                            img.footer__top-logo(src=logoIcon)
+                            img.footer__top-logo(src=require('@img/edited.svg'))
                         .footer__top-name SM24.BY 
                     p.footer__top-description Поломка стиральной машины доставляет значительные неудобства. Альтернатива тратить время на ручное полоскание вещей в тазике выглядит неубедительно. При первых проявлениях признаков неисправности рекомендуем сразу же обратиться к мастерам сервиса. Это недорогой, быстрый и надежный способ решить проблему с вышедшей из строя техникой. Выполняем ремонт стиральных машин в Минске с обслуживанием всех районов столицы (Центральный, Партизанский, Октябрьский, Ленинский, Советский, Первомайский, Заводской, Фрунзенский, Московский).
                 .footer__top-right

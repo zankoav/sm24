@@ -18,8 +18,14 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KR7B7V9');</script>
     <!-- End Google Tag Manager -->
-    
+    <style>
+        body{display: none;}
+    </style>
     <?php wp_head(); ?>
+
+    <script type="text/javascript">
+        const landing_ajax = "<?= admin_url('admin-ajax.php'); ?>";
+    </script>
 </head>
 
 <body>
